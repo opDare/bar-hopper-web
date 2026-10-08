@@ -1,16 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bar Hopper</title>
     <link rel="stylesheet" href="./style.css" />
 </head>
+
 <body>
     <header class="header">
-        <div class="header-inner">
+        <div class="container header-inner">
             <div class="logo">Bar Hopper</div>
+
+            <form class="search" id="searchForm" role="search">
+                <input id="searchInput" type="search" placeholder="Search..." autocomplete="off" />
+                <button type="button" id="clearSearch" class="clear-btn" hidden>✕</button>
+            </form>
         </div>
     </header>
+
+    <main class="container layout">
+        <div class="cards" id="restaurantCards">
+            <article class="card" data-id="1" tabindex="0" role="button">
+                <a href="./barDetails.html?id=1" class="card-link">
+                    <div class="card-media">
+                        <img class="card-img" src="./medias/placeholder.webp">
+                        <span class="price-badge">$$</span>
+                        <button class="fav-btn" data-fav="1">
+                            🤍
+                        </button>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Bar 1</h3>
+                        <p class="card-sub">Cocktail · Central</p>
+                        <div class="card-rating">
+                            <span class="stars" aria-label="4.5">
+                                <span aria-hidden="true">★★★★★</span>
+                                <span class="stars-fill" style="width:90%" aria-hidden="true">★★★★★</span>
+                            </span>
+                            <span class="score">4.5</span>
+                            <span class="reviews">(123)</span>
+                        </div>
+                        <p class="card-desc">This is Bar 1 abc fff eee.cccccc</p>
+                        <div class="card-tags">
+                            <span class="tag">nice</span>
+                            <span class="tag">good</span>
+                            <span class="tag">aaa</span>
+                        </div>
+                    </div>
+                </a>
+            </article>
+        </div>
+
+        <p class="empty" id="emptyState" hidden>
+            no restaurant found
+        </p>
+    </main>
+    <script src="index.js"></script>
 </body>
+
 </html>
